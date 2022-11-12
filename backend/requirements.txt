@@ -1,0 +1,11 @@
+click==8.0.3
+Flask==2.0.2
+itsdangerous==2.0.1
+Jinja2==3.0.2
+MarkupSafe==2.0.1
+Werkzeug==2.0.2
+flask-cors==3.0.10
+uwsgi==2.0.17
+annoy==1.17.1
+tensorflow-cpu==2.10.0
+tensorflow-hub==0.12.0
