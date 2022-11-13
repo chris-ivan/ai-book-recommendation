@@ -6,6 +6,7 @@ import {
   ListItemText,
   Typography,
 } from '@mui/material';
+import { parseAuthor } from '../utils/helper';
 
 interface IBookSummaryCard {
   onClick: (book: IBookSummary) => void;
@@ -44,7 +45,7 @@ const BookSummaryCard: FC<IBookSummaryCard> = ({ onClick, book }) => {
             variant="body2"
             color="text.secondary"
           >
-            {authors}
+            {parseAuthor(authors)}
           </Typography>
         }
       />

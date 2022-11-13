@@ -44,7 +44,7 @@ const SearchBookModal: FC<ISearchBookModal> = ({
   };
 
   return (
-    <Dialog open={isOpen} onClose={onClose}>
+    <Dialog open={isOpen} onClose={onClose} fullWidth maxWidth="sm">
       <DialogTitle>Cari Buku</DialogTitle>
       <DialogContent>
         <TextField
@@ -63,13 +63,17 @@ const SearchBookModal: FC<ISearchBookModal> = ({
             bgcolor: 'background.paper',
           }}
         >
-          {books.map((book) => (
-            <BookSummaryCard
-              key={book.id}
-              book={book}
-              onClick={handleSelectBook}
-            />
-          ))}
+          {books.length ? (
+            books.map((book) => (
+              <BookSummaryCard
+                key={book.id}
+                book={book}
+                onClick={handleSelectBook}
+              />
+            ))
+          ) : (
+            <p>Tidak ada judul buku yang sesuai.</p>
+          )}
         </List>
       </DialogContent>
     </Dialog>

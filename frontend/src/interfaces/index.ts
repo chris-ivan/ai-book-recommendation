@@ -1,7 +1,7 @@
 export interface IBookSummary {
   id: number;
   title: string;
-  authors: string;
+  authors: string[];
   imageUrl: string;
 }
 
@@ -27,7 +27,7 @@ export interface IBookDetail extends IBookSummary {
 export interface IBookSummaryResponse {
   id: number;
   title: string;
-  authors: string;
+  authors: string[];
   image_url: string;
 }
 

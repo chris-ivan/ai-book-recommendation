@@ -32,16 +32,26 @@ const SearchDescription: FC<ISearchDescription> = ({
   const disabled = description.length < 20;
 
   return (
-    <div>
+    <div className="search-description">
       <TextField
-        placeholder="Masukkan deskripsi buku"
+        placeholder="Masukkan deskripsi buku yang kamu sukai..."
         error={!!description && disabled}
         value={description}
         multiline
         onChange={onChangeDescription}
         helperText="Masukkan setidaknya 20 karakter."
+        rows={4}
+        fullWidth
+        sx={{
+          marginBottom: 1,
+        }}
       />
-      <Button variant="contained" disabled={disabled} onClick={getSimilarBooks}>
+      <Button
+        fullWidth
+        variant="contained"
+        disabled={disabled}
+        onClick={getSimilarBooks}
+      >
         Cari
       </Button>
     </div>

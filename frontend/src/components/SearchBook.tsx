@@ -35,13 +35,17 @@ const SearchBook: FC<ISearchBook> = ({ onFetchRecommendation, setLoading }) => {
   };
 
   return (
-    <div>
+    <div className="search-book">
       <OutlinedInput
         id="judul-buku"
         onClick={setOpenModal(true)}
         placeholder="Cari judul buku"
         readOnly
         value={title}
+        sx={{
+          width: '100%',
+          margin: '12px 0',
+        }}
       />
       <SearchBookModal
         isOpen={isOpen}
