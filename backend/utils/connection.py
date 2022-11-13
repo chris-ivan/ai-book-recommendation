@@ -10,7 +10,7 @@ def get_db_connection():
 
 def get_similar_titles(title, limit):
     conn = get_db_connection()
-    query = f"SELECT * FROM books WHERE title LIKE '%{title}%' LIMIT 10"
+    query = f"SELECT * FROM books WHERE title LIKE '%{title}%' LIMIT {limit}"
     books = conn.execute(query).fetchall()
     conn.close()
 

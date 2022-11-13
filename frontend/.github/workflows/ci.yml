@@ -1,0 +1,21 @@
+name: Production
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build-prod:
+    runs-on: ubuntu-latest
+    if: github.event_name == 'push' && github.ref == 'refs/heads/master'
+    steps:
+      - uses: actions/checkout@master
+      - name: Publish Production to Registry
+        uses: elgohr/Publish-Docker-Github-Action@v4
+        with:
+          name: chris-ivan/gender-classification-fe
+          username: ${{ github.actor }}
+          password: ${{ secrets.TOKEN }}
+          registry: ghcr.io
+          tags: 'production'

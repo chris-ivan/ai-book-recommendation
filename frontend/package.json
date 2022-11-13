@@ -1,22 +1,33 @@
 {
-  "name": "frontend",
+  "name": "fe-testing",
   "private": true,
   "version": "0.0.0",
-  "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview",
-    "check": "svelte-check --tsconfig ./tsconfig.json"
+    "dev": "vite --port 3000",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.10.5",
+    "@emotion/styled": "^11.10.5",
+    "@esbuild-plugins/node-globals-polyfill": "^0.1.1",
+    "@mui/material": "^5.10.13",
+    "awesome-debounce-promise": "^2.1.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "use-constant": "^1.1.1"
   },
   "devDependencies": {
-    "@sveltejs/vite-plugin-svelte": "^1.1.0",
-    "@tsconfig/svelte": "^3.0.0",
-    "svelte": "^3.52.0",
-    "svelte-check": "^2.9.2",
-    "svelte-preprocess": "^4.10.7",
-    "tslib": "^2.4.0",
+    "@types/react": "^18.0.17",
+    "@types/react-dom": "^18.0.6",
+    "@typescript-eslint/eslint-plugin": "^5.37.0",
+    "@typescript-eslint/parser": "^5.37.0",
+    "@vitejs/plugin-react": "^2.1.0",
+    "eslint": "^8.23.1",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-react": "^7.31.8",
+    "prettier": "2.7.1",
     "typescript": "^4.6.4",
-    "vite": "^3.2.3"
+    "vite": "^3.1.0"
   }
 }
