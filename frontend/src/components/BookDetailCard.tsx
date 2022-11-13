@@ -50,7 +50,6 @@ const BookDetailCard: FC<IBookDetailCard> = ({ book }) => {
 
   return (
     <ListItem
-      onClick={redirectToGoodReads}
       alignItems="flex-start"
       sx={{
         padding: '12px',
