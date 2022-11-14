@@ -1,6 +1,4 @@
 import pickle, annoy, sys
-
-# import tensorflow_hub as hub
 import tensorflow as tf
 
 from utils.constant import EMBEDDING_DIMENSION, MODEL_URL, INDEX_FILE, PROJECTION_MTX
