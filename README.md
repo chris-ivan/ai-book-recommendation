@@ -1,4 +1,5 @@
 # Sistem Rekomendasi Buku
+![Demo](static/demo.gif)
 Sistem rekomendasi buku ini dibuat untuk memenuhi tugas besar mata kuliah ET4047 Intelegensi Buatan & Analisis Big Data untuk Telekomunikasi. Sistem yang dikembangkan merupakan machine learning menggunakan [ANN (Approximate Nearest Neighbour)](https://towardsdatascience.com/comprehensive-guide-to-approximate-nearest-neighbors-algorithms-8b94f057d6b6) yang dimuat dalam web.
 
 ## Instalasi
