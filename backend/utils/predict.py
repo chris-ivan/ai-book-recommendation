@@ -1,5 +1,6 @@
 import pickle, annoy, sys
 import tensorflow as tf
+import tensorflow_hub as hub
 
 from utils.constant import EMBEDDING_DIMENSION, MODEL_URL, INDEX_FILE, PROJECTION_MTX
 from utils.connection import get_book_by_id, get_multiple_book_by_ids
@@ -14,8 +15,8 @@ with open(INDEX_FILE + ".mapping", "rb") as handle:
 print("Mapping file is loaded.", file=sys.stderr)
 
 print("Loading the TF-Hub model...", file=sys.stderr)
-embed_fn = tf.saved_model.load(MODEL_URL)
-# embed_fn = hub.load(MODEL_URL)
+# embed_fn = tf.saved_model.load(MODEL_URL)
+embed_fn = hub.load(MODEL_URL)
 print("TF-Hub model is loaded.", file=sys.stderr)
 
 print("Loading random projection matrix...", file=sys.stderr)
