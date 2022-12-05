@@ -12,7 +12,7 @@ const Navbar = () => {
       }}
     >
       <div className="container">
-        <b>Book Recommender</b>
+        <b>You Might Also Love These Books</b>
       </div>
     </AppBar>
   );

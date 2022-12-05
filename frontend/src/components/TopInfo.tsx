@@ -8,7 +8,7 @@ const TopInfo = () => {
         margin: '20px auto',
       }}
     >
-      <h1>Sistem Rekomendasi Buku</h1>
+      <h1>You Might Also Love These Books</h1>
       <Typography
         sx={{ display: 'inline' }}
         component="span"
